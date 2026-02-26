@@ -97,3 +97,20 @@ if selected == 'Used_cars':
 
     st.success(Price_predict)
 
+if selected== 'Bmi':
+    st.title('BMI')
+    
+    Income = st.text_input('Income')
+    LotSize = st.text_input('LotSize')
+    Riding_prediction = ''
+    if st.button('Predict'):
+        Riding_prediction = riding_model.predict([[
+            float(Income),
+            float(LotSize)
+            ]])
+        if Riding_prediction[0]==1:
+            Riding_prediction = 'Owner'
+        else:
+            Riding_prediction = 'Non Owner'
+    st.success(Riding_prediction)
+
