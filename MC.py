@@ -118,6 +118,7 @@ if selected== 'Bmi':
             bmi_prediction = '3'
         else:
             bmi_prediction = 'อ้วน'
-    st.success(Riding_prediction)
+    st.success(bmi_prediction)
+
 
 
