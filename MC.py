@@ -101,7 +101,7 @@ if selected== 'Bmi':
     st.title('BMI')
     
     Gender = st.text_input('Gender')
-    options = ["ชาย", "หญิง"]
+    options = st.option_input["ชาย", "หญิง"]
     Gender = options
     Height = st.text_input('Height')
     Weight = st.text_input('Weight')
@@ -121,6 +121,7 @@ if selected== 'Bmi':
         else:
             bmi_prediction = 'อ้วน'
     st.success(bmi_prediction)
+
 
 
 
