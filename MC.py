@@ -100,7 +100,7 @@ if selected == 'Used_cars':
 if selected== 'Bmi':
     st.title('BMI')
     
-    Gender = st.option_input["ชาย", "หญิง"]
+    Gender = st.option_input['Gender']
     Height = st.text_input('Height')
     Weight = st.text_input('Weight')
     bmi_prediction = ''
@@ -119,6 +119,7 @@ if selected== 'Bmi':
         else:
             bmi_prediction = 'อ้วน'
     st.success(bmi_prediction)
+
 
 
 
