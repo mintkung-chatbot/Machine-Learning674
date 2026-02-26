@@ -116,14 +116,15 @@ if selected== 'Bmi':
             float(Weight)
             ]])
         if bmi_prediction[0]==1:
-            bmi_prediction = '1'
+            bmi_prediction = 'สูง'
         elif bmi_prediction[0]==2:
-            bmi_prediction = '2'
+            bmi_prediction = 'กลาง'
         elif bmi_prediction[0]==3:
-            bmi_prediction = '3'
+            bmi_prediction = 'อ้วน'
         else:
-            bmi_prediction = '4'
+            bmi_prediction = 'ปกติ'
     st.success(bmi_prediction)
+
 
 
 
