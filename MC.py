@@ -46,7 +46,7 @@ brand_map = {
     'Volkswagen': 9
 }
 
-Gender = {
+Gender_map = {
     'ชาย': 0,
     'หญิง': 1,
 }
@@ -105,13 +105,13 @@ if selected == 'Used_cars':
 if selected== 'Bmi':
     st.title('BMI')
     
-    Gender = st.selectbox('Gender', Gender)
+    Gender = st.selectbox('Gender', Gender_map)
     Height = st.text_input('Height')
     Weight = st.text_input('Weight')
     bmi_prediction = ''
     if st.button('Predict'):
         bmi_prediction = bmi_model.predict([[
-            float(Gender),
+            Gender_map[Gender],
             float(Height),
             float(Weight)
             ]])
@@ -124,6 +124,7 @@ if selected== 'Bmi':
         else:
             bmi_prediction = 'ปกติ'
     st.success(bmi_prediction)
+
 
 
 
