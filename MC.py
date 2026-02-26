@@ -100,17 +100,24 @@ if selected == 'Used_cars':
 if selected== 'Bmi':
     st.title('BMI')
     
-    Income = st.text_input('Income')
-    LotSize = st.text_input('LotSize')
-    Riding_prediction = ''
+    Gender = st.text_input('Gender')
+    Height = st.text_input('Height')
+    Weight = st.text_input('Weight')
+    bmi_prediction = ''
     if st.button('Predict'):
-        Riding_prediction = riding_model.predict([[
-            float(Income),
-            float(LotSize)
+        bmi_prediction = bmi_model.predict([[
+            float(Gender),
+            float(Height),
+            float(Weight)
             ]])
-        if Riding_prediction[0]==1:
-            Riding_prediction = 'Owner'
+        if bmi_prediction[0]==1:
+            bmi_prediction = '1'
+        elif bmi_prediction[0]==2:
+            bmi_prediction = '2'
+        elif bmi_prediction[0]==3:
+            bmi_prediction = '3'
         else:
-            Riding_prediction = 'Non Owner'
+            bmi_prediction = 'อ้วน'
     st.success(Riding_prediction)
+
 
