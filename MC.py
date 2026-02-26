@@ -46,6 +46,11 @@ brand_map = {
     'Volkswagen': 9
 }
 
+Gender = {
+    'ชาย': 0,
+    'หญิง': 1,
+}
+
 transmission_map = {
     'Automatic': 0,
     'Manual': 1
@@ -100,7 +105,7 @@ if selected == 'Used_cars':
 if selected== 'Bmi':
     st.title('BMI')
     
-    Gender = st.text_input('Gender')
+    Gender = st.selectbox('Gender', Gender)
     Height = st.text_input('Height')
     Weight = st.text_input('Weight')
     bmi_prediction = ''
@@ -119,6 +124,7 @@ if selected== 'Bmi':
         else:
             bmi_prediction = '4'
     st.success(bmi_prediction)
+
 
 
 
